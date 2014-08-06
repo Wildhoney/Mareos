@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"io/ioutil"
+)
 
 /**
  * @struct Mareos
@@ -34,7 +37,17 @@ func (m Mareos) Reduce() string {
 	return "Reduce"
 }
 
+/**
+ * @method main
+ * @return 0
+ */
 func main() {
+
     m := Mareos{}
     fmt.Println("Map: ", m.Map())
+
+    buffer, _ := ioutil.ReadFile("Facebook.json")
+    contents := string(buffer)
+    fmt.Println(contents)
+
 }

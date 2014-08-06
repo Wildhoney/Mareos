@@ -1,0 +1,6 @@
+[
+	{ "Adam": ["Maria", "Gabriele", "Artem"] },
+	{ "Maria": ["Gabriele", "Adam"] }
+	{ "Gabriele": ["Maria", "Adam", "Artem"] },
+	{ "Artem": ["Gabriele", "Adam"] }
+]
