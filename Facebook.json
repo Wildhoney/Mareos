@@ -1,6 +1,6 @@
 [
-	{ "Adam": ["Maria", "Gabriele", "Artem"] },
-	{ "Maria": ["Gabriele", "Adam"] }
-	{ "Gabriele": ["Maria", "Adam", "Artem"] },
-	{ "Artem": ["Gabriele", "Adam"] }
+	{ "name": "Adam", "friends": ["Maria", "Gabriele", "Artem"] },
+	{ "name": "Maria", "friends": ["Gabriele", "Adam"] },
+	{ "name": "Gabriele", "friends": ["Maria", "Adam", "Artem"] },
+	{ "name": "Artem", "friends": ["Gabriele", "Adam"] }
 ]

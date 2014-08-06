@@ -3,14 +3,26 @@ package main
 import (
 	"fmt"
 	"io/ioutil"
+	"encoding/json"
 )
 
 /**
  * @struct Mareos
- * @return void
  */
 type Mareos struct {
     length, width int
+}
+
+/**
+ * @struct Models
+ */
+type Models struct {
+	Collection []Model
+}
+
+type Model struct {
+	Name string `json:"name"`
+	Friends []string `json:"friends"`
 }
 
 /**
@@ -46,8 +58,12 @@ func main() {
     m := Mareos{}
     fmt.Println("Map: ", m.Map())
 
-    buffer, _ := ioutil.ReadFile("Facebook.json")
-    contents := string(buffer)
-    fmt.Println(contents)
+    // Read and parse the document as JSON.
+    data, _   := ioutil.ReadFile("Facebook.json")
+    dataModel := make([]Model, 0)
+	json.Unmarshal(data, &dataModel)
+
+	// What do we have, sunshine?
+	fmt.Printf("%#v", dataModel)
 
 }
