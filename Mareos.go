@@ -9,18 +9,12 @@ import (
 /**
  * @struct Mareos
  */
-type Mareos struct {
-    length, width int
-}
+type Mareos struct { }
 
 /**
- * @struct Models
+ * @struct Collection
  */
-type Models struct {
-	Collection []Model
-}
-
-type Model struct {
+type Collection struct {
 	Name string `json:"name"`
 	Friends []string `json:"friends"`
 }
@@ -51,7 +45,7 @@ func (m Mareos) Reduce() string {
 
 /**
  * @method main
- * @return 0
+ * @return void
  */
 func main() {
 
@@ -60,7 +54,7 @@ func main() {
 
     // Read and parse the document as JSON.
     data, _   := ioutil.ReadFile("Facebook.json")
-    dataModel := make([]Model, 0)
+    dataModel := make([]Collection, 0)
 	json.Unmarshal(data, &dataModel)
 
 	// What do we have, sunshine?
