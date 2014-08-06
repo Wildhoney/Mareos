@@ -64,6 +64,6 @@ func main() {
 	json.Unmarshal(data, &dataModel)
 
 	// What do we have, sunshine?
-	fmt.Printf("%#v", dataModel)
+	fmt.Printf("%d People - %#v", len(dataModel), dataModel)
 
 }
